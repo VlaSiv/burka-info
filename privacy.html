@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy notice for Burka Personal Orchestrator: Google read-only access, AI processing, local storage, revocation, and deletion.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Privacy notice · Burka Personal Orchestrator</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #20312f; background: #f6f7f3; }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.7; }
+    a { color: #145a4b; text-underline-offset: .18em; }
+    a:hover { text-decoration-thickness: .14em; }
+    a:focus-visible { outline: 3px solid #a84f0e; outline-offset: 4px; border-radius: 2px; }
+    .wrap { width: min(100% - 3rem, 64rem); margin-inline: auto; }
+    .reading { max-width: 47rem; }
+    .skip { position: absolute; inset-block-start: -5rem; inset-inline-start: 1rem; padding: .75rem 1rem; background: white; z-index: 2; }
+    .skip:focus { inset-block-start: 1rem; }
+    header { border-block-end: 1px solid #cfd8d0; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem; padding-block: 1.2rem; }
+    .brand { font-weight: 700; text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    .updated { margin-block: 1.5rem 0; padding: .8rem 1rem; border: 1px solid #cfd8d0; border-radius: .5rem; color: #40564c; background: #eef3ee; font-size: .95rem; }
+    .intro { padding-block: 3rem 1rem; }
+    .eyebrow { margin: 0 0 .75rem; color: #466357; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0 0 1rem; font-size: clamp(2.3rem, 5vw, 3.4rem); line-height: 1.15; letter-spacing: -.035em; }
+    h2 { margin-block: 0 1rem; font-size: 1.4rem; line-height: 1.35; }
+    p { margin-block: 0 1rem; }
+    .lead { font-size: 1.15rem; color: #40564c; }
+    .contents { padding: 1.25rem 1.5rem; border: 1px solid #cfd8d0; border-radius: .7rem; background: #fff; }
+    .contents ul { margin-block-end: 0; }
+    section { padding-block: 2rem; border-block-end: 1px solid #cfd8d0; }
+    section:last-child { border: 0; }
+    ul { padding-inline-start: 1.35rem; }
+    li + li { margin-block-start: .5rem; }
+    .commitment { padding: 1rem 1.2rem; border-inline-start: 4px solid #145a4b; background: #eef3ee; }
+    .commitment p:last-child { margin: 0; }
+    footer { margin-block-start: 1rem; padding-block: 1.6rem; border-block-start: 1px solid #cfd8d0; font-size: .9rem; color: #4e6056; }
+    footer p:last-child { margin: 0; }
+    @media (max-width: 700px) { .wrap { width: min(100% - 2rem, 64rem); } .intro { padding-block-start: 2rem; } }
+    @media print { .skip { display: none; } body, .contents { background: #fff; } .wrap { width: 100%; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Burka Personal Orchestrator</a>
+      <nav aria-label="Main navigation">
+        <a href="./">About Burka</a>
+        <a href="privacy.html" aria-current="page">Privacy notice</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap reading" tabindex="-1">
+    <p class="updated">Privacy notice · Last updated <time datetime="2026-10-28">28 October 2026</time>.</p>
+    <div class="intro">
+      <p class="eyebrow">Burka Personal Orchestrator</p>
+      <h1>Privacy notice</h1>
+      <p class="lead">Burka is an experimental assistant maintained by VlaSiv for personal project planning, discussions, and open questions. This notice describes the current local installation and its Google connector.</p>
+      <p>The application is used by its owner, with two explicitly authorized Google accounts. The information website does not offer public access to the assistant.</p>
+    </div>
+    <nav class="contents" aria-label="Privacy notice contents">
+      <ul>
+        <li><a href="#google-data">Google access and purpose</a></li>
+        <li><a href="#ai-services">External AI services</a></li>
+        <li><a href="#storage">Storage and retention</a></li>
+        <li><a href="#deletion">Revocation and deletion</a></li>
+        <li><a href="#limited-use">Data use and training</a></li>
+        <li><a href="#website">Website hosting</a></li>
+        <li><a href="#contact">Contact and changes</a></li>
+      </ul>
+    </nav>
+    <section id="google-data" aria-labelledby="google-data-title">
+      <h2 id="google-data-title">Google access and purpose</h2>
+      <p>Each account is connected separately through Google's OAuth consent flow. Burka stores authorization and account-identification information to reconnect and check that it is reading the intended account. It does not receive the account's Google password.</p>
+      <p>The connector uses Google's REST APIs to perform reads requested for the owner's tasks:</p>
+      <ul>
+        <li><strong>Calendar:</strong> read events from the primary calendar for a selected time range, and calendar identity metadata.</li>
+        <li><strong>Gmail:</strong> search message identifiers, read a selected message's headers and content, and check account identity. There is no separate attachment-download feature.</li>
+        <li><strong>Drive:</strong> search files and return metadata, including names, types, modification times, links, and descriptions. The granted read-only permission is broader than the current metadata search; file-content download and export are not implemented.</li>
+      </ul>
+      <p>These results can help answer a question, prepare a summary, or relate requested information to a project. The connector has no email-send, calendar-edit, file-upload, or Google-data deletion feature.</p>
+    </section>
+    <section id="ai-services" aria-labelledby="ai-services-title">
+      <h2 id="ai-services-title">External AI services</h2>
+      <p>When the owner asks Burka to use Google information in an AI-assisted task, selected results may be included in requests to the configured OpenAI service. When the owner requests an independent review, a selected review brief may also be sent through GitHub Copilot. The current Copilot reviewer receives the brief, without direct access to the Google accounts.</p>
+      <p>Information sent to an AI provider is processed outside the local device under that provider's terms and the account's data controls. Provider retention periods and deletion procedures remain subject to those terms and controls; this notice does not promise zero retention. The owner's confirmed restrictions on model training are described below.</p>
+      <p>Google credentials are used by the local connector to call Google; they are not intended to be included in model prompts, review briefs, or public website content.</p>
+    </section>
+    <section id="storage" aria-labelledby="storage-title">
+      <h2 id="storage-title">Storage and retention</h2>
+      <p>Google OAuth credentials and account metadata are stored in the owner's local operating-system profile, protected by filesystem access permissions. The Google connector does not add application-level encryption to its token files. This notice makes no claim that device or disk encryption has been verified.</p>
+      <p>Selected information and generated answers may remain in local Hermes conversation history, saved artifacts, summaries, and owner-managed backup copies. There is no automatic retention deadline configured for this material. It remains until the owner deletes the relevant records and copies.</p>
+      <p>The information website does not host the application's credentials, conversations, Google results, or operational database.</p>
+    </section>
+    <section id="deletion" aria-labelledby="deletion-title">
+      <h2 id="deletion-title">Revocation and deletion</h2>
+      <p>The owner can revoke Burka's Google authorization through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Each connected Google account has its own authorization to manage.</p>
+      <p>Revoking authorization does not erase information already retrieved. To remove local copies, the owner must delete the relevant conversation records, artifacts, summaries, exported material, and backup copies. Removing the local credential files is a separate action from removing saved content.</p>
+      <p>Copies already submitted to an external service are subject to that service's retention rules and deletion controls. Deleting a local conversation is not a request to delete a provider's copy.</p>
+    </section>
+    <section id="limited-use" aria-labelledby="limited-use-title">
+      <h2 id="limited-use-title">Data use and training</h2>
+      <p>Burka has no model-training pipeline. Its operator does not sell Google user data, use it for advertising, or train its own models with it.</p>
+      <p>Google Workspace API data, including information derived from it, is not used to develop, improve, or train generalized or non-personalized artificial-intelligence or machine-learning models. This restriction also applies to transfers to external AI services.</p>
+      <p>Burka uses only owner-approved AI services configured to exclude Google-derived information from generalized model training. The owner confirmed this configuration for the OpenAI/ChatGPT and GitHub Copilot accounts used by Burka on <time datetime="2026-10-28">28 October 2026</time>. This is an owner attestation, not an independent provider audit.</p>
+      <div class="commitment">
+        <p>Burka commits to using and transferring information received from Google APIs in accordance with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. This includes the restrictions described in Google's <a href="https://support.google.com/cloud/answer/13806988?hl=en">privacy requirements for AI use</a>.</p>
+      </div>
+    </section>
+    <section id="website" aria-labelledby="website-title">
+      <h2 id="website-title">Website hosting</h2>
+      <p>These pages contain no JavaScript, forms, analytics, advertising, third-party fonts, or external assets. The site code does not set cookies or use browser storage.</p>
+      <p>This information site is hosted on GitHub Pages. GitHub handles website requests and logs visitors' IP addresses for security purposes. Other technical request data is handled under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. The absence of site analytics does not mean the hosting service receives no request data.</p>
+    </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact and changes</h2>
+      <p>The maintainer is <a href="https://github.com/VlaSiv">VlaSiv</a>. Use the <a href="https://github.com/VlaSiv/burka-info/issues">project's GitHub issues</a> for general questions. Issues are public: do not include Google account addresses, private messages, document contents, tokens, or credentials.</p>
+      <p>This notice should be updated before a material change to the data sources, sharing, storage, or purpose described here. Any new Google access requires the appropriate authorization.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <p><a href="./">Burka Personal Orchestrator</a> · Privacy notice · <time datetime="2026-10-28">28 October 2026</time></p>
+    </div>
+  </footer>
+</body>
+</html>
