@@ -58,7 +58,7 @@
     </div>
   </header>
   <main id="main" class="wrap" tabindex="-1">
-    <p class="updated">Personal information site · Last updated <time datetime="2026-10-28">28 October 2026</time>.</p>
+    <p class="updated">Personal information site · Last updated <time datetime="2026-11-15">15 November 2026</time>.</p>
     <div class="hero">
       <p class="eyebrow">A personal, experimental assistant</p>
       <h1>Burka Personal<br>Orchestrator</h1>
@@ -88,13 +88,14 @@
     </div>
     <section id="google-access" class="section" aria-labelledby="google-title">
       <h2 id="google-title">Why Burka requests Google access</h2>
-      <p>The current personal installation connects two accounts explicitly authorized by the owner. The Google connector uses read-only Calendar, Gmail, and Drive permissions through Google's REST APIs.</p>
+      <p>The personal installation connects accounts explicitly authorized by the owner through Google's REST APIs. Reading and optional writing capabilities have separate OAuth grants.</p>
       <ul>
         <li><strong>Calendar:</strong> read primary-calendar events for a requested time range.</li>
-        <li><strong>Gmail:</strong> search for messages and read a selected message.</li>
-        <li><strong>Drive:</strong> search files and return their metadata. File-content download is not implemented in the current connector.</li>
+        <li><strong>Gmail</strong> supports message searches and reading selected messages. Separately authorized sending requires the owner's confirmation of the exact account, recipients, subject and text for each email.</li>
+        <li><strong>Drive</strong> supports searching and reading selected files, and create Google Docs in owner-selected folders when that capability is authorized.</li>
+        <li><strong>Sheets</strong> supports reading and editing bounded spreadsheet ranges through a separately authorized capability.</li>
       </ul>
-      <p>The connector does not send email, change calendar events, or modify, upload, or delete Drive files. Selected results may be included in an AI-assisted task, as explained in the <a href="privacy.html#ai-services">AI services section of the privacy notice</a>.</p>
+      <p>Email previews, permission records and send receipts are stored privately on the owner's application host. Selected Google results may be included in an AI-assisted task, as explained in the <a href="privacy.html#ai-services">AI services section of the privacy notice</a>.</p>
     </section>
     <section class="section" aria-labelledby="personal-title">
       <h2 id="personal-title">Personal use, with explicit connections</h2>
