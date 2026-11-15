@@ -79,7 +79,7 @@
       <p>Each account is connected separately through Google's OAuth consent flow. Burka stores authorization and account-identification information to reconnect and check that it is accessing the intended account. It does not receive the account's Google password.</p>
       <p>The connector uses Google's REST APIs for the owner's requested tasks. Optional sending, Sheets edits and document creation each require a separate Google consent.</p>
       <ul>
-        <li><strong>Calendar:</strong> read events from the primary calendar for a selected time range, and calendar identity metadata.</li>
+        <li><strong>Calendar</strong> supports reading primary-calendar events and identity metadata. A separate Calendar grant can update the description of an owner-selected existing reminder instance. Software limits those writes to the configured private series, uses revision checks, and preserves its time, title and reminder settings.</li>
         <li><strong>Gmail</strong> supports message searches, reading selected messages and account-identity checks. A separate send-only grant permits sending a plain-text email after the owner confirms the exact saved preview in the authenticated private Telegram chat.</li>
         <li><strong>Drive</strong> supports metadata searches and reading selected files. A separately authorized capability creates Google Docs in owner-selected folders.</li>
         <li><strong>Sheets</strong> uses a separate grant for bounded reading and editing of spreadsheets accessible to the authorized account.</li>
